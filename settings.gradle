@@ -1,0 +1,2 @@
+rootProject.name = "Item List Student Record"
+include ':app'
