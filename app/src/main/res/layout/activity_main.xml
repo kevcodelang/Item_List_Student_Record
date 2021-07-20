@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.item_studentrecord.MainActivity">
+    tools:context="com.example.item_studentrecord.activity.MainActivity">
 
     <TextView
         android:id="@+id/itemID"
@@ -31,5 +31,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/itemID"
         />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="50dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

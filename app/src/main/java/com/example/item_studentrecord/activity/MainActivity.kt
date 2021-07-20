@@ -1,13 +1,11 @@
-package com.example.item_studentrecord
+package com.example.item_studentrecord.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Adapter
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.studentrecord.databinding.ActivityMainBinding
-import com.example.item_studentrecord.models.Item
 import com.example.item_studentrecord.ui.ItemsAdapter
 import com.example.item_studentrecord.ui.MainViewModel
 
@@ -24,6 +22,11 @@ class MainActivity : AppCompatActivity() {
 
         itemsAdapter = ItemsAdapter(listOf())
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
+
+        binding.floatingActionButton.setOnClickListener {
+            val intent = Intent(this, StudentAddActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.studRV.apply {
             layoutManager = GridLayoutManager(this@MainActivity, 1)
